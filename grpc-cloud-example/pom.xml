@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>grpc-cloud</artifactId>
+        <groupId>com.jyw</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>grpc-cloud-example</artifactId>
+    <packaging>pom</packaging>
+    <name>grpc-cloud-example</name>
+
+
+    <properties>
+        <grpc-cloud-interface.version>1.0-SNAPSHOT</grpc-cloud-interface.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>com.jyw</groupId>
+                <artifactId>grpc-cloud-interface</artifactId>
+                <version>${grpc-cloud-interface.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+
+    <modules>
+        <module>grpc-cloud-interface</module>
+        <module>grpc-cloud-implement</module>
+    </modules>
+
+
+</project>

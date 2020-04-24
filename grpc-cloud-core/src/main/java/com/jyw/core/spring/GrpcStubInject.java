@@ -17,7 +17,7 @@ import java.lang.reflect.Method;
 /**
  * bean属性有{@link GrpcStub}注解时进行注入处理
  */
-public class StubInject implements BeanPostProcessor {
+public class GrpcStubInject implements BeanPostProcessor {
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
@@ -29,14 +29,14 @@ public class StubInject implements BeanPostProcessor {
         for (Field field : fields) {
             if (isStubFiled(field)) {
                 ReflectionUtils.makeAccessible(field);
-                ReflectionUtils.setField(field, bean, buildStub(field));
+                ReflectionUtils.setField(field, bean, newStub(field));
             }
         }
         return bean;
     }
 
 
-    private Object buildStub(Field field) {
+    private Object newStub(Field field) {
         //获取com.jyw.stub.GreeterGrpc.GreeterBlockingStub中的com.jyw.stub.GreeterGrpc
         Class clazz = field.getType().getEnclosingClass();
         String newStubMethodName = getNewStubMethodName(field);

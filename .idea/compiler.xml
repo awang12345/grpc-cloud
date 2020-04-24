@@ -7,17 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="grpc-cloud-core" />
+        <module name="grpc-cloud-implement" />
+        <module name="grpc-cloud-interface" />
         <module name="grpc-cloud-registry-nacos" />
-        <module name="implement" />
-        <module name="interface" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="demo-impl" target="1.8" />
-      <module name="grpc-cloud-demo-interface" target="1.8" />
-      <module name="grpc-cloud-example" target="1.8" />
-      <module name="implement" target="1.8" />
-      <module name="interface" target="1.7" />
-    </bytecodeTargetLevel>
   </component>
 </project>

@@ -27,7 +27,7 @@ import java.util.Map;
 /**
  * 注册服务提供
  */
-public class ServiceRegister implements ApplicationListener<ContextRefreshedEvent>, DisposableBean {
+public class GrpcServiceRegister implements ApplicationListener<ContextRefreshedEvent>, DisposableBean {
 
     private Server server;
 
