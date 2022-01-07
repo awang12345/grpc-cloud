@@ -20,7 +20,7 @@
         <demo.com.jyw.stub.impl.version>1.0-SNAPSHOT</demo.com.jyw.stub.impl.version>
         <demo.interface.version>1.0-SNAPSHOT</demo.interface.version>
         <grpc.version>1.4.0</grpc.version>
-        <protobuf-java.version>3.11.0</protobuf-java.version>
+        <protobuf-java.version>3.16.1</protobuf-java.version>
         <commons-lang3.version>3.3.2</commons-lang3.version>
         <spring.version>5.2.5.RELEASE</spring.version>
     </properties>
